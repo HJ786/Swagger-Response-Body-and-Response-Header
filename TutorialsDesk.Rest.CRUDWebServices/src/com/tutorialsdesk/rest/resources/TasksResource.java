@@ -1,8 +1,11 @@
 package com.tutorialsdesk.rest.resources;
+import io.swagger.annotations.Api;
+
 import java.io.IOException;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
@@ -16,10 +19,12 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Request;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
+
 import com.tutorialsdesk.rest.dao.TaskDao;
 import com.tutorialsdesk.rest.model.Task;;
 
 // Will map the resource to the URL tasks
+@Api(value = "Tasks API")
 @Path("/tasks")
 public class TasksResource {
 // Allows to insert contextual objects into the class, 
