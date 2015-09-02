@@ -130,20 +130,6 @@ public Response deleteTask( @ApiParam( value = "ID", required = true ) @PathPara
 
 
 
-// retuns the number of tasks
-// use http://localhost:8080/TutorialsDesk.Rest.CRUDWebServices/rest/tasks/count
-// to get the total number of records
-/*@GET
-@Path("count")
-@Produces(MediaType.TEXT_PLAIN)
-public String getCount() {
-int count = TaskDao.instance.getModel().size();
-return String.valueOf(count);
-} */
-
-
-
-
 @Path( "count" )
 @GET
 @ApiOperation( value = "Total Tasks", notes = "Total Tasks", response = Task.class )
